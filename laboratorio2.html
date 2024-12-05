@@ -29,7 +29,17 @@
             localStorage.setItem("d"+tar, des);
             localStorage.setItem("e"+tar, est);
         }
+
+        function consultarTarea() {
+            const tar = document.getElementById("Tarea").value ;
+            const des = localStorage.getItem("d"+tar);
+            const est = localStorage.getItem("e"+tar);
+            document.getElementById("Descripcion").value = des;
+            document.getElementById("Estado").value = est;
+        }
     </script>
+
+    
 </head>
     <body style="background-color: beige;">
         
@@ -55,6 +65,9 @@
                 <input type="button" onclick="eliminarTarea()" value="Eliminar"/>
             </form>
        </section>
+
+       
+
 
        
 
