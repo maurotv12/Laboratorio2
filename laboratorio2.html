@@ -46,6 +46,13 @@
             localStorage.setItem("d"+tar, des);
             localStorage.setItem("e"+tar, est);
         }
+
+        function eliminarTarea() {
+            const tar = document.getElementById("Tarea").value ;
+            localStorage.removeItem(tar);
+            localStorage.removeItem("d"+tar);
+            localStorage.removeItem("e"+tar);
+        }
     </script>
 
     
