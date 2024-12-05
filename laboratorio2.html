@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="RAGAR">
+    <meta name="keywords" content="li, td, ul, ol, img...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FullStack G-70</title>
+    <link rel="icon" href="img/favicon.ico">
+    <style>
+        .resaltar{
+            background-color: aqua;
+            color: red;
+            font-weight: bold;
+        }
+        .cuerpotabla{
+            background-color: bisque;
+            color: darkblue;
+            font-weight: bold;
+        }
+    </style>
+
+    <script>
+        function guardarDatosLS() {
+            const tar = document.getElementById("Tarea").value ;
+            const des = document.getElementById("Descripcion").value ;
+            const est = document.getElementById("Estado").value ;
+            localStorage.setItem(tar, tar);
+            localStorage.setItem("d"+tar, des);
+            localStorage.setItem("e"+tar, est);
+        }
+    </script>
+</head>
+    <body style="background-color: beige;">
+        
+        <section id="formularios">
+            <hr>
+            <h1>FORMULARIOS</h1>
+            <hr>
+    
+            <form onsubmit="guardarDatosLS(); return false;">
+                <label for="Tarea">Nombre de Tarea:</label>
+                <input type="text" name="Tarea" id="Tarea" placeholder="Escriba su Tarea">
+                <br> <br>
+                <label for="Descripcion">Descripción:</label>
+                <input type="text" name="Descripcion" id="Descripcion" placeholder="Escriba su Descripción">
+                <br> <br>
+                <label for="Estado">Estado:</label>
+                <input type="text" name="Estado" id="Estado" placeholder="Escriba su Estado">
+                <br>
+                <br>
+                <input type="submit" value="Enviar"/>
+                <input type="button" onclick="consultarTarea()" value="Consultar"/>
+                <input type="button" onclick="actualizarTarea()" value="Actualizar"/>
+                <input type="button" onclick="eliminarTarea()" value="Eliminar"/>
+            </form>
+       </section>
+
+       
+
+
+
+    </body>
+</html>
